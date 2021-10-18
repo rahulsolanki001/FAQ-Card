@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+    body{font-family: 'Kumbh Sans',sans-serif;background-image:linear-gradient(to bottom right,hsl(273, 75%, 66%),hsl(240, 73%, 65%));}
+    p{font-size: 14px;;}
+    @media screen and (min-width:600px) {
+      .container{width: 60%; margin-left: 20%; margin-right: 20%;margin-top: 15%;margin-bottom: 10%;background-color: white;display: flex;flex-direction: row;background-image: url('./images/bg-pattern-desktop.svg');border: 1px solid hsl(240, 73%, 65%);border-radius: 20px;} 
+      .image{width: 40%;}
+      .box{position: absolute;top: 50%;left: 12%;}
+    }
+
+    @media screen and (max-width:600px) {
+      .container{width: 90%; margin-left: 5%; margin-right: 5%;margin-top: 10%;margin-bottom: 10%;background-color: white;display: flex;flex-direction: column;justify-content: center;background-image: url('./images/bg-pattern-desktop.svg');border: 1px solid hsl(273, 75%, 66%);border-radius: 10px;}
+      .image .img{width:40%;height: auto;}
+      .box{position: absolute;top: 20%;left: 5%;}
+    }
+    
+    .content{width:40%;margin-left: 15%;margin-right: 10%;}
+    
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    h1{text-align: center;}
+    span{margin-left: 20px;display: inline-flex;}
+    .visible:hover{color:hsl(14, 88%, 65%);cursor: pointer;transition-duration: 0.5s;}
+    #hidden1,#hidden2,#hidden3,#hidden4,#hidden5{display: none;transition:1s ease-in;}
+
+  </style>
+</head>
+<body>
+  <img class='box' src="./images/illustration-box-desktop.svg" alt="@ box image">
+  <div class='container'>
+    <div class='image'>
+      <img src="./images/illustration-woman-online-desktop.svg" alt="A woman & a desktop image">
+    </div>
+    <div class='content'>
+      <h1>FAQ</h1>
+      <div class='question'>
+        <p class='visible' onclick="show1()">How many team members can i invite?<span><img src="./images/icon-arrow-down.svg" alt="arrow down icon"></span></p>
+        <p id='hidden1'>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan. </p>
+      </div>
+      <div class='question'>
+        <p class='visible' onclick="show2()"> What is the maximum file upload size?<span><img src="./images/icon-arrow-down.svg" alt="arrow down icon"></span></p>
+        <p id='hidden2'>No more than 2GB. All files in your account must fit your allotted storage space. </p>
+      </div>
+      <div class='question'>
+        <p class='visible' onclick="show3()">How do I reset my password?<span><img src="./images/icon-arrow-down.svg" alt="arrow down icon"></span></p>
+        <p id='hidden3'>Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you</p>
+      </div>
+      <div class='question'>
+        <p class='visible' onclick="show4()">Can I cancel my subscription?<span><img src="./images/icon-arrow-down.svg" alt="arrow down icon"></span></p>
+        <p id='hidden4'>Yes! Send us a message and we’ll process your request no questions asked. </p>
+      </div>
+      <div class='question'>
+        <p class='visible' onclick="show5()"> Do you provide additional support? <span><img src="./images/icon-arrow-down.svg" alt="arrow down icon"></span></p>
+        <p id='hidden5'>Chat and email support is available 24/7. Phone lines are open during normal business hours </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Rahul Solanki</a>.
+  </div>
+</body>
+<script src='index.js'></script>
+</html>
